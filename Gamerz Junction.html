@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <title>Gamerz Junction</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      nav {
+        width: 100vw;
+        /* height: 15vh; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: #333; /* Change background color */
+        color: white; /* Change text color */
+        position: fixed;
+        z-index: 1;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin-right: 30px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      nav .logo {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: crimson;
+        font-size: 24px;
+      }
+
+      nav ul li img {
+        width: 40px;
+      }
+      nav ul li button {
+        background-color: red;
+        color: white;
+        padding: 0.2rem 1rem;
+        border: 0;
+        outline: 0;
+        border-radius: 0.5rem;
+        font-weight: 500;
+      }
+      nav ul li button:hover{
+        background-color: green;
+      }
+
+      video {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        /* position: fixed; */
+      }
+      @keyframes fadeIn {
+        from {
+          scale: 0;
+        }
+        to {
+          scale: 1;
+        }
+      }
+
+      .fade-in {
+        animation: fadeIn 2s ease-out;
+      }
+
+      .box2 {
+        width: 100vw;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .text-center {
+        border: 1px solid black;
+        padding: 50px;
+        border-radius: 5px;
+        background-color: black;
+        color: white;
+      }
+      .box3 {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* gap: 2rem; */
+      }
+      .box3-subheading1 {
+        width: 30vw;
+        height: 50vh;
+        font-size: 20px;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+      }
+      .box3-subheading2 {
+        width: 50vw;
+        height: 100vh;
+        /* margin-left: 17rem; */
+      }
+      .box3-subheading2 img {
+        width: 90%;
+        /* background-color: black; */
+        /* border: 2px solid black; */
+
+        border-radius: 20% 100% 50% 40% / 30% 30% 70% 70%;
+      }
+      span {
+        font-size: 70px;
+        font-family: cursive;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+        /* height: 10px; */
+        margin: auto;
+        text-align: center;
+        font-family: arial;
+        z-index: 0;
+      }
+
+      .price {
+        color: grey;
+        font-size: 22px;
+      }
+      .box5 {
+        width: 100vw;
+        height: 100vh;
+        background-color: #000;
+      }
+      .box5-subbox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        place-items: center;
+        gap: 20px;
+      }
+
+      .card {
+        width: 400px;
+        margin-top: 70px;
+        padding: 10px;
+      }
+      i {
+        color: white;
+        font-size: 50px;
+      }
+      .card img {
+        /* padding: 20px; */
+        /* width: 400px; */
+        height: 200px;
+      }
+
+      .card:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.1);
+      }
+
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+      .mobileGames {
+        text-decoration: none;
+        border: 2px solid black;
+        color: white;
+        background-color: #000;
+        padding: 4px;
+      }
+      .mobileGames:hover {
+        opacity: 0.7;
+      }
+
+      .card button:hover {
+        opacity: 0.7;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      .contactPage{
+        text-decoration: none;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="logo">
+          <img
+            src="https://cdn-icons-png.flaticon.com/128/588/588258.png"
+            alt=""
+          />
+          Gamerz Junction
+        </li>
+        <li>Home</li>
+        <li>Game</li>
+        <li>Explore</li>
+        <li>Download</li>
+        <a class="contactPage" href="/nodejs/events/contactPage.html"><li>Contact us</li></a>
+      </ul>
+      <ul>
+        <li><button>Login</button></li>
+      </ul>
+    </nav>
+
+    <video
+      autoplay
+      loop
+      muted
+      src="./image/pexels-ron-lach-7849228 (Original).mp4"
+    ></video>
+
+    <div class="box2">
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>A well-known quote, contained in a blockquote element.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          Someone famous in <cite title="Source Title">Source Title</cite>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="box3">
+      <div class="box3-subheading1">
+        <p>
+          <span>Unlocking</span> virtual realms, one pixelated adventure at a
+          time. Welcome to Gamerz Junction – Where Legends Level Up!
+        </p>
+      </div>
+      <div class="box3-subheading2">
+        <img src="./image/pic1.png" alt="" />
+      </div>
+    </div>
+    <div class="box4">
+      <div class="box4-subheading1"></div>
+      <div class="box4-subheading2"></div>
+    </div>
+    <div class="box5">
+      <h2
+        style="
+          text-decoration: underline;
+          color: gold;
+          padding-top: 30px;
+          text-align: center;
+        "
+      >
+        1000+ GameZone
+      </h2>
+
+      <div class="box5-subbox">
+        <i class="fas fa-chevron-circle-left" id="backBtn"></i>
+        <div class="card">
+          <img
+            src="https://images.unsplash.com/photo-1639656333400-ee5240f757a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="GTA5 game"
+            style="width: 100%"
+          />
+          <h3>Mobile Games</h3>
+          <!-- <p class="price"></p> -->
+          <a class="mobileGames" href="https://poki.com/en/online"
+            >Click here to play</a
+          >
+          <!-- <button><a href="https://poki.com/en/online">Click here to purchase</a></button> -->
+        </div>
+        <div class="card">
+          <img
+            src="https://media.wired.com/photos/61f48f02d0e55ccbebd52d15/3:2/w_2400,h_1600,c_limit/Gear-Rant-Game-Family-Plans-1334436001.jpg"
+            alt="Denim Jeans"
+            style="width: 100%"
+          />
+          <h3>PC Games</h3>
+          <!-- <p class="price">$23.35</p> -->
+
+          <a class="mobileGames" href="https://www.crazygames.com/"
+            >Click here to play</a
+          >
+        </div>
+        <div class="card">
+          <img
+            src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Denim Jeans"
+            style="width: 100%"
+          />
+          <h3>Cloud Gaming</h3>
+          <!-- <p class="price">$5.00</p> -->
+
+          <a class="mobileGames" href="https://cloud.jiogames.com/"
+            >Click here to play</a
+          >
+        </div>
+        <i class="fas fa-chevron-circle-right" id="nextBtn"></i>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Your Gamerz Junction. All rights reserved.</p>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the box2 element
+        const box2 = document.querySelector(".box2");
+
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        // Function to handle scroll events
+        function handleScroll() {
+          if (isInViewport(box2)) {
+            box2.classList.add("fade-in");
+            // Remove the event listener once the animation has played
+            window.removeEventListener("scroll", handleScroll);
+          }
+        }
+
+        // Attach the event listener to the scroll event
+        window.addEventListener("scroll", handleScroll);
+      });
+    </script>
+  </body>
+</html>
